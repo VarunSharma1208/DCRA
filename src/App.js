@@ -107,12 +107,12 @@ const App = () => {
           <div style={{ alignItems: 'center',display:'flex',justifyContent:'center' }}>
             <span style={{ fontSize: 15,color:'#FFFFFF', fontWeight: "700", marginLeft: 10,marginTop:20 }}>MAP</span>
           </div>
-          <div style={{ height: 60, width: 60, position: 'absolute', right: 35, display: 'flex', justifyContent: 'center', alignItems: 'center',top:20 }}>
+          <div style={{ height: 60, width: 60, position: 'absolute', right: 35, display: 'flex', justifyContent: 'center', alignItems: 'center',top:0 }}>
 
             <img style={{ width: 24, height: 24 }} src={require('./assets/Frame16903@3x.png')}
               onClick={(e) => { }} />
           </div>
-          <div style={{ height: 60, width: 60, position: 'absolute', right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center',top:20 }}>
+          <div style={{ height: 60, width: 60, position: 'absolute', right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center',top:0 }}>
 
             <img style={{ width: 24, height: 24 }} src={require('./assets/Frame16904@3x.png')}
               onClick={(e) => toggleDrawer()} />
