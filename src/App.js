@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Map from "./Map";
-import { Layers, TileLayer, VectorLayer } from "./Layers";
+import { Layers, TileLayer, VectorLayer,ImageLayer } from "./Layers";
 import { Style, Icon } from "ol/style";
 import Feature from "ol/Feature";
 import Point from "ol/geom/Point";
@@ -144,17 +144,17 @@ const App = () => {
 
 
           {PowerPlant && (
-            <TileLayer source={wms({
-              url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'PowerPlant' },
-              serverType: 'geoserver',
-              transition: 0,
-            })} zIndex={1} />
+           <TileLayer source={wms({
+            url: 'http://13.126.94.175:8080/geoserver/privatedss/wms?service=WMS',
+            params: { 'layers': 'privatedss:Roads', 'TILED': true },
+            serverType: 'geoserver',
+            transition: 0,
+          })} zIndex={1} />
           )}
           {OilAndGasPipelines && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:OilAndGas' },
+              params: { 'layers': 'geonode:OilAndGas', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -163,7 +163,7 @@ const App = () => {
           {Electricityline && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:ElectricityLine' },
+              params: { 'layers': 'geonode:ElectricityLine' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -171,7 +171,7 @@ const App = () => {
           {Seaport && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Seaport' },
+              params: { 'layers': 'geonode:Seaport', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -179,7 +179,7 @@ const App = () => {
           {Roads && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Roads' },
+              params: { 'layers': 'geonode:Roads', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -187,7 +187,7 @@ const App = () => {
           {RailwayStation && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:RailwayStation' },
+              params: { 'layers': 'geonode:RailwayStation', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -195,7 +195,7 @@ const App = () => {
           {RailwayLine && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:RailwayLine' },
+              params: { 'layers': 'geonode:RailwayLine', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -203,7 +203,7 @@ const App = () => {
           {Bridges && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblBridgesExposure' },
+              params: { 'layers': 'geonode:tblBridgesExposure', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -211,7 +211,7 @@ const App = () => {
           {Airport && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Airport' },
+              params: { 'layers': 'geonode:Airport' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -219,7 +219,7 @@ const App = () => {
           {Schools && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Schools' },
+              params: { 'layers': 'geonode:Schools', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -227,7 +227,7 @@ const App = () => {
           {PoliceStation && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:PoliceStation' },
+              params: { 'layers': 'geonode:PoliceStation', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -235,7 +235,7 @@ const App = () => {
           {Hospital && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Hospital' },
+              params: { 'layers': 'geonode:Hospital', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -243,7 +243,7 @@ const App = () => {
           {FireStation && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:FireStation' },
+              params: { 'layers': 'geonode:FireStation', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -251,7 +251,7 @@ const App = () => {
           {CycloneShelter && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:CycloneShelter' },
+              params: { 'layers': 'geonode:CycloneShelter', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -259,7 +259,7 @@ const App = () => {
           {Slums && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblSlumsExposure' },
+              params: { 'layers': 'geonode:tblSlumsExposure', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -267,7 +267,7 @@ const App = () => {
           {Residential && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Residential' },
+              params: { 'layers': 'geonode:Residential' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -275,7 +275,7 @@ const App = () => {
           {Industrial && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Industrial' },
+              params: { 'layers': 'geonode:Industrial', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -283,7 +283,7 @@ const App = () => {
           {Commercial && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Commercial' },
+              params: { 'layers': 'geonode:Commercial', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -291,7 +291,7 @@ const App = () => {
           {VillageBoundary && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:Village%20Boundaries' },
+              params: { 'layers': 'geonode:Village%20Boundaries', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -299,7 +299,7 @@ const App = () => {
           {TehsilBoundary && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblTehsil_layers' },
+              params: { 'layers': 'geonode:tblTehsil_layers', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -307,7 +307,7 @@ const App = () => {
           {DistrictBoundary && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:DistrictBoundary' },
+              params: { 'layers': 'geonode:DistrictBoundary', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -315,7 +315,7 @@ const App = () => {
           {ConeOfUncertainity && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_cone_of_uncertainity' },
+              params: { 'layers': 'geonode:tblRT_cone_of_uncertainity' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -323,7 +323,7 @@ const App = () => {
           {ForecastedTrackLine && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_track_line_fore' },
+              params: { 'layers': 'geonode:tblRT_track_line_fore', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -331,7 +331,7 @@ const App = () => {
           {ForecastedTrackPoints && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_track_point_fore' },
+              params: { 'layers': 'geonode:tblRT_track_point_fore', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -339,7 +339,7 @@ const App = () => {
           {ObservedTrackLine && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_track_line_obs' },
+              params: { 'layers': 'geonode:tblRT_track_line_obs', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -347,7 +347,7 @@ const App = () => {
           {ObservedTrackPoints && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_track_point_obs' },
+              params: { 'layers': 'geonode:tblRT_track_point_obs', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -355,7 +355,7 @@ const App = () => {
           {SurgeHazard && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblEventSurgeHazard_real' },
+              params: { 'layers': 'geonode:tblEventSurgeHazard_real' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -363,7 +363,7 @@ const App = () => {
           {FloodHazard && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblEventFloodHazard_real' },
+              params: { 'layers': 'geonode:tblEventFloodHazard_real', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -371,7 +371,7 @@ const App = () => {
           {CycloneHazard && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblEventWindHazard_real' },
+              params: { 'layers': 'geonode:tblEventWindHazard_real', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -379,7 +379,7 @@ const App = () => {
           {AffectedPopulation && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_Affected_Population' },
+              params: { 'layers': 'geonode:tblRT_Affected_Population', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -387,7 +387,7 @@ const App = () => {
           {AffectedPopulationDensity && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:tblRT_Affected_Population_Density' },
+              params: { 'layers': 'geonode:tblRT_Affected_Population_Density', 'TILED': true },
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
@@ -395,7 +395,7 @@ const App = () => {
           {StateBoundarynew && (
             <TileLayer source={wms({
               url: 'http://webdcra.ncrmp.gov.in:8080/geoserver/geonode/wms',
-              params: { 'layers': 'geonode:StateBoundarynew' },
+              params: { 'layers': 'geonode:StateBoundarynew' , 'TILED': true},
               serverType: 'geoserver',
               transition: 0,
             })} zIndex={1} />
