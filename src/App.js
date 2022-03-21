@@ -145,8 +145,8 @@ const App = () => {
 
           {PowerPlant && (
            <TileLayer source={wms({
-            url: 'http://13.126.94.175:8080/geoserver/privatedss/wms?service=WMS',
-            params: { 'layers': 'privatedss:Roads', 'TILED': true },
+            url: 'https://ahocevar.com/geoserver/wms',
+            params: { 'layers': 'topp:states', 'TILED': true },
             serverType: 'geoserver',
             transition: 0,
           })} zIndex={1} />
