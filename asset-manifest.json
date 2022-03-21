@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DCRA/static/css/main.9fb01e26.chunk.css",
-    "main.js": "/DCRA/static/js/main.50a64d63.chunk.js",
-    "main.js.map": "/DCRA/static/js/main.50a64d63.chunk.js.map",
+    "main.js": "/DCRA/static/js/main.6dbc44ef.chunk.js",
+    "main.js.map": "/DCRA/static/js/main.6dbc44ef.chunk.js.map",
     "runtime-main.js": "/DCRA/static/js/runtime-main.c7933f96.js",
     "runtime-main.js.map": "/DCRA/static/js/runtime-main.c7933f96.js.map",
     "static/js/2.0a9b3ca5.chunk.js": "/DCRA/static/js/2.0a9b3ca5.chunk.js",
     "static/js/2.0a9b3ca5.chunk.js.map": "/DCRA/static/js/2.0a9b3ca5.chunk.js.map",
     "index.html": "/DCRA/index.html",
-    "precache-manifest.a9ed9591f185c4e7d1e6b8c045bea135.js": "/DCRA/precache-manifest.a9ed9591f185c4e7d1e6b8c045bea135.js",
+    "precache-manifest.c0d2e4e5be744c0608d2fa364ad146ab.js": "/DCRA/precache-manifest.c0d2e4e5be744c0608d2fa364ad146ab.js",
     "service-worker.js": "/DCRA/service-worker.js",
     "static/css/main.9fb01e26.chunk.css.map": "/DCRA/static/css/main.9fb01e26.chunk.css.map",
     "static/js/2.0a9b3ca5.chunk.js.LICENSE.txt": "/DCRA/static/js/2.0a9b3ca5.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.c7933f96.js",
     "static/js/2.0a9b3ca5.chunk.js",
     "static/css/main.9fb01e26.chunk.css",
-    "static/js/main.50a64d63.chunk.js"
+    "static/js/main.6dbc44ef.chunk.js"
   ]
 }
