@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebaea7ee548e4f994fddc6f156057245",
+    "revision": "139be277018256e9024b05738199b964",
     "url": "/DCRA/index.html"
   },
   {
-    "revision": "26d5d7bbd72b97d7f24e",
+    "revision": "4e49deeba02c0e6df2b2",
     "url": "/DCRA/static/css/main.9fb01e26.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DCRA/static/js/2.0a9b3ca5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "26d5d7bbd72b97d7f24e",
-    "url": "/DCRA/static/js/main.6dbc44ef.chunk.js"
+    "revision": "4e49deeba02c0e6df2b2",
+    "url": "/DCRA/static/js/main.82a4f09e.chunk.js"
   },
   {
     "revision": "9961ce1b7f4153973bce",
