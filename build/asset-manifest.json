@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/DCRA/static/css/main.9fb01e26.chunk.css",
+    "main.js": "/DCRA/static/js/main.e2069052.chunk.js",
+    "main.js.map": "/DCRA/static/js/main.e2069052.chunk.js.map",
+    "runtime-main.js": "/DCRA/static/js/runtime-main.c7933f96.js",
+    "runtime-main.js.map": "/DCRA/static/js/runtime-main.c7933f96.js.map",
+    "static/js/2.bff22d6d.chunk.js": "/DCRA/static/js/2.bff22d6d.chunk.js",
+    "static/js/2.bff22d6d.chunk.js.map": "/DCRA/static/js/2.bff22d6d.chunk.js.map",
+    "index.html": "/DCRA/index.html",
+    "precache-manifest.9824aac78f0bbb85ea59ca90227f418a.js": "/DCRA/precache-manifest.9824aac78f0bbb85ea59ca90227f418a.js",
+    "service-worker.js": "/DCRA/service-worker.js",
+    "static/css/main.9fb01e26.chunk.css.map": "/DCRA/static/css/main.9fb01e26.chunk.css.map",
+    "static/js/2.bff22d6d.chunk.js.LICENSE.txt": "/DCRA/static/js/2.bff22d6d.chunk.js.LICENSE.txt",
+    "static/media/Frame16903@3x.png": "/DCRA/static/media/Frame16903@3x.a8b1228d.png",
+    "static/media/Frame16904@3x.png": "/DCRA/static/media/Frame16904@3x.0b4f1a3f.png",
+    "static/media/Map_Layers@3x.png": "/DCRA/static/media/Map_Layers@3x.67d07c32.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c7933f96.js",
+    "static/js/2.bff22d6d.chunk.js",
+    "static/css/main.9fb01e26.chunk.css",
+    "static/js/main.e2069052.chunk.js"
+  ]
+}
